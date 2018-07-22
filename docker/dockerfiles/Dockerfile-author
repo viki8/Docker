@@ -1,0 +1,7 @@
+FROM centos
+MAINTAINER amviki
+
+RUN mkdir /opt/author/
+ADD . /opt/author/ 
+RUN ln -s /opt/author/jdk1.8.0_171/bin/java /bin/java 
+RUN cd /opt/author && java -jar AEM_6.2_publish-4503.jar -unpack 
