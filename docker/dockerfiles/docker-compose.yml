@@ -1,0 +1,15 @@
+version: '3.1'
+services:
+  web1:
+   image: httpd:latest
+   ports: 
+     - 1002:80
+  web2:
+   image: httpd:latest
+   ports: 
+     - 1003:80
+networks:
+     httpd:
+       driver: bridge
+
+

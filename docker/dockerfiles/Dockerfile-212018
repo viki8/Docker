@@ -1,0 +1,13 @@
+#
+
+FROM centos
+MAINTAINER amviki
+
+RUN mkdir /opt/publish/
+volumes:
+     - AEM_volume:/opt/publish/vol
+     - /opt/publish/:/opt/publish/
+
+volumes:
+  AEM_volume:
+    driver: local
